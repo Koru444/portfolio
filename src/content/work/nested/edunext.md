@@ -2,7 +2,7 @@
 title: Edu Next
 publishDate: 2024-07-04 
 img: /assets/project1.png
-img_alt: image d'une page internet avec  une jeune etudiante 
+img_alt: Image d'une page internet avec une jeune etudiante 
 description: |
  Gestionnaire d'absences et retards 
 tags:
