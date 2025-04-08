@@ -1,14 +1,11 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
+import BaseLayout from '../layouts/BaseLayout.astro';
 
-import ContactCTA from "../components/ContactCTA.astro";
-import Hero from "../components/Hero.astro";
+import ContactCTA from '../components/ContactCTA.astro';
+import Hero from '../components/Hero.astro';
 ---
 
-<BaseLayout
-	title="About | Blond Brandon"
-	description="A propos Blond Brandon Lorem Ipsum"
->
+<BaseLayout title="About | Blond Brandon" description="A propos Blond Brandon Lorem Ipsum">
 	<div class="stack gap-20">
 		<main class="wrapper about">
 			<Hero
@@ -22,113 +19,95 @@ import Hero from "../components/Hero.astro";
 					alt="Blond Brandon at work with a colleague"
 				/>
 			</Hero>
-
-			<section>
+<h2 class="section-title">Background</h2>
+				
 				<h2 class="section-title">Background</h2>
 				<div class="content">
 					<p>
-						Je suis un développeur web full stack junior, formé au
-						Conservatoire National des Arts et Métiers à Paris. J’ai
-						eu l’opportunité de travailler sur plusieurs projets web
-						académique notamment une application pour la gestion des
-						absences et retards universitaires, ainsi que des sites
-						réalisés sous Wordpress avec optimisation SEO. Mes
-						expériences m’ont permis de consolider mes compétences
-						techniques.
-					</p>
+						Je suis un développeur web full stack junior passionné, formé au Conservatoire National des Arts et Métiers à Paris. J’ai eu l’opportunité de travailler sur plusieurs projets web, notamment une application pour la gestion des absences et retards universitaires, ainsi que des sites réalisés sous Wordpress avec optimisation SEO. Mes expériences m’ont permis de consolider mes compétences techniques tout en adoptant les bonnes pratiques UX/UI.
+					
 				</div>
-				<section>
-					<h2 class="section-title">Education</h2>
-					<div class="content">
-						<p>
-							J’ai obtenu un Bac Technologique en Sciences et
-							Technologies du Management et de la Gestion, avec
-							une spécialisation en Informatique de Gestion. Par
-							la suite, j’ai suivi plusieurs formations en
-							développement web, dont un Bac+2 d’Intégrateur
-							Développeur Web/Mobile, avec un focus sur le
-							front-end (HTML/CSS/JS, Angular, Bootstrap) et le
-							back-end (PHP, Symfony, SQL).
-						</p>
-					</div>
-					<section>
-						<h2 class="section-title">Skills</h2>
-						<div class="content">
-							<p>Front-End : HTML, CSS, JavaScript, Angular, Bootstrap
+			</section>
+			<section>
+				<h2 class="section-title">Education</h2>
+				<div class="content">
+					<p>J’ai obtenu un Bac Technologique en Sciences et Technologies du Management et de la Gestion, avec une spécialisation en Informatique de Gestion. Par la suite, j’ai suivi plusieurs formations en développement web, dont un Bac+2 d’Intégrateur Développeur Web/Mobile, avec un focus sur le front-end (HTML/CSS/JS, Angular, Bootstrap) et le back-end (PHP, Symfony, SQL).</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Skills</h2>
+				<div class="content">
+					<p>Front-End : HTML, CSS, JavaScript, Angular, Bootstrap
 
-								Back-End : PHP, SQL, Symfony
-								
-								CMS : Wordpress
-								
-								Outils : Photoshop, Illustrator, Pack Office
-								
-								Autres :  SEO, conception graphique (logos, flyers)
-								
-								
-						</div>
-					</section>
-				</section>
-
-				<ContactCTA />
+					Back-End : PHP, SQL, Symfony
+					
+					CMS : Wordpress
+					
+					Outils : Photoshop, Illustrator, Pack Office
+					
+					Autres : UX/UI, SEO, conception graphique (logos, flyers)</p>
+				</div>
 			</section>
 		</main>
 
-		<style>
-			.about {
-				display: flex;
-				flex-direction: column;
-				gap: 3.5rem;
-			}
-
-			img {
-				margin-top: 1.5rem;
-				border-radius: 1.5rem;
-				box-shadow: var(--shadow-md);
-			}
-
-			section {
-				display: flex;
-				flex-direction: column;
-				gap: 0.5rem;
-				color: var(--gray-200);
-			}
-
-			.section-title {
-				grid-column-start: 1;
-				font-size: var(--text-xl);
-				color: var(--gray-0);
-			}
-
-			.content {
-				grid-column: 2 / 4;
-			}
-
-			.content :global(a) {
-				text-decoration: 1px solid underline transparent;
-				text-underline-offset: 0.25em;
-				transition: text-decoration-color var(--theme-transition);
-			}
-
-			.content :global(a:hover),
-			.content :global(a:focus) {
-				text-decoration-color: currentColor;
-			}
-
-			@media (min-width: 50em) {
-				.about {
-					display: grid;
-					grid-template-columns: 1fr 60% 1fr;
-				}
-
-				.about > :global(:first-child) {
-					grid-column-start: 2;
-				}
-
-				section {
-					display: contents;
-					font-size: var(--text-lg);
-				}
-			}
-		</style>
+		<ContactCTA />
 	</div>
 </BaseLayout>
+
+<style>
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	img {
+		margin-top: 1.5rem;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	.section-title {
+		grid-column-start: 1;
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content {
+		grid-column: 2 / 4;
+	}
+
+	.content :global(a) {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+	}
+
+	.content :global(a:hover),
+	.content :global(a:focus) {
+		text-decoration-color: currentColor;
+	}
+
+	@media (min-width: 50em) {
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 60% 1fr;
+		}
+
+		.about > :global(:first-child) {
+			grid-column-start: 2;
+		}
+
+		section {
+			display: contents;
+			font-size: var(--text-lg);
+		}
+	}
+</style>
